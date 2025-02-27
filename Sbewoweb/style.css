@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative; /* Для абсолютного позиционирования текста */
+}
+
+/* Контейнер для шариков */
+.container {
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+/* Стиль для шариков */
+span {
+    width: 40px;
+    height: 40px;
+    background-color: #ff0000d7;
+    margin: 0 10px;
+    border-radius: 50%; /* Это делает элемент круглым */
+    animation: loader 0.9s ease-in-out infinite; /* Анимация с плавными переходами */
+}
+
+/* Анимация для шариков */
+@keyframes loader {
+    0% { margin-bottom: 0px; }
+    50% { margin-bottom: 50px; }
+    100% { margin-bottom: 0px; }
+}
+
+span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Текст сверху и снизу */
+.text-top, .text-bottom, .text-bottom2, .text-bottom3{
+    font-size: 24px;
+    margin: 10px 0;
+    position: absolute; /* Абсолютное позиционирование текста */
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.text-top {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 435px; /* Располагаем текст вверху */
+    color: rgb(172, 172, 172)
+    
+}
+
+.text-bottom {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 20px; /* Sbewo */
+    right: 50px
+}
+
+.text-bottom3 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 20px; /* Mini-App */
+    left: 37px;
+    color: rgb(255, 0, 0)
+    
+}
+
+
+
+/* Стили для анимации спанов */
+span {
+    display: inline-block; /* Горизонтальное расположение */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.76);
+    margin: 10px;
+    border-radius: 50%; /* Шарики */
+    animation: bounce 0.4s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+
+
+
+/* Стиль по умолчанию для больших экранов */
+body {
+    font-size: 16px;
+    margin: 20px;
+}
+
+/* Для экранов шириной 600px и меньше (например, мобильные устройства) */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Меньше шрифт на маленьких экранах */
+        margin: 10px;
+    }
+}
+
+/* Для экранов от 601px до 1024px (например, планшеты) */
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+    body {
+        font-size: 15px;
+        margin: 15px;
+    }
+}
+
+body {
+    font-size: 2vw; /* Размер шрифта будет зависеть от ширины экрана */
+}
+
+.container {
+    width: 80%; /* Ширина контейнера будет составлять 80% от ширины родительского блока */
+}
+
+/* Пример для flexbox с префиксами */
+.container {
+    display: -webkit-flex;  /* Для старых версий Safari */
+    display: flex;
+}
+
+/* Сбросим все отступы и поля по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Применяем шрифт */
+    line-height: 1.5;
+}
+
+body {
+    width: 1200px; /* Фиксированная ширина */
+    height: 800px; /* Фиксированная высота */
+    margin: 0 auto; /* Центрирование страницы */
+}
